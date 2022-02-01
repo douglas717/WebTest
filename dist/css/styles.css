@@ -70,4 +70,7 @@ img.device-small {
   width: 70%;
   margin-bottom: -40px;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.red-box {
+  background-color: red;
+}
