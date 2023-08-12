@@ -6,5 +6,51 @@
     <body>
         Test File 
         <div class='red-box'>red Box</div>
+        <div>
+            <form id="df-1" class="df-form-change form-inline" method="get">
+                
+                    
+                <input id="df-zip" name="search_term"  type="text"  placeholder="Postal Code" class="form-control form-control-lg" style="padding: .5rem 1.5rem .5rem 1rem;" />
+                <button class="btn btn-primary btn-lg" onclick="checkSearch()">Search</button> 
+        </form>
+            <form id="df-2" class="df-form-change form-inline" method="get">
+                
+                    
+                    <input id="df-search-term-field" name="search_term" type="text" value="Mission Viejo, CA 92675, USA" placeholder="Postal Code" class="form-control form-control-lg" style="padding: .5rem 1.5rem .5rem 1rem;" />
+                    <button class="btn btn-primary btn-lg" onclick="checkSearch()">Search</button> 
+            </form>
+        </div>
+        <div>
+            <a href="#" onclick="checkSearch()">Click</a>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
+
+        <script>
+
+            $(document).ready(function () {
+
+            })
+
+            function checkSearch(){
+                var field =  document.querySelector('#df-zip');
+                var search =  document.querySelector('#df-search-term-field');
+                
+                                
+                if (field.value){
+                  console.log(field.value); 
+                  $('#df-zip').closest("div").css({"background-color":"green"});
+                }
+    
+                if (search.value) {
+                    console.log(search.value);  
+                    $('#df-zip').closest("div").css({"background-color":"yellow"});
+                }
+                
+
+
+                
+            }
+        </script>
     </body>
 </htmL>
